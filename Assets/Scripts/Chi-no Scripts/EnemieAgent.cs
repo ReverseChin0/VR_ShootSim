@@ -10,12 +10,13 @@ public class EnemieAgent : MonoBehaviour
     Animator miAnim;
 
     Vector3 currentDestination;
-    int current = 0;
+    int current = 0, ntargets;
     public float Distance = 2;
 
     private void Start()
     {
         currentDestination = target[current].position;
+        ntargets = target.Length;
         agent.SetDestination(currentDestination);
         miAnim = transform.GetChild(0).GetComponent<Animator>();    
     }
@@ -27,9 +28,9 @@ public class EnemieAgent : MonoBehaviour
         {
             miAnim.SetBool("moving", true);
             current++;
-            if (current > 3)
+            if (current >= ntargets)
                 current = 0;
-            print("yes");
+            //print("yes");
             currentDestination = target[current].position;
             agent.SetDestination(currentDestination);
         }
