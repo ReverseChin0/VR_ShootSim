@@ -2,45 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+namespace Valve.VR.InteractionSystem
 {
-    // en el gameObject de tipo que sea bala
-    public float LifeTime = 5.0f;
-    Rigidbody MyRigidBody;
-
-    private void Awake()
+    public class Projectile : MonoBehaviour
     {
-        MyRigidBody = GetComponent<Rigidbody>();
-        SetEnable();
-    }
+        // en el gameObject de tipo que sea bala
+        public float LifeTime = 5.0f;
+        Rigidbody MyRigidBody;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        SetEnable();
-    }
+        private void Awake()
+        {
+            MyRigidBody = GetComponent<Rigidbody>();
+            SetEnable();
+        }
 
-    public void Disparar(Weapon _weapon)
-    {
-        transform.position = _weapon.transform.position;
-        transform.rotation = _weapon.transform.rotation;
+        private void OnCollisionEnter(Collision collision)
+        {
+            SetEnable();
+        }
 
-        gameObject.SetActive(true);
+        public void Disparar(Weapon _weapon)
+        {
+            transform.position = _weapon.Barrel.position;
+            transform.rotation = _weapon.Barrel.rotation;
 
-        MyRigidBody.AddRelativeForce(Vector3.forward * 10,ForceMode.Impulse);
-        StartCoroutine(LifeTimeDuration());
-    }
+            gameObject.SetActive(true);
 
-    IEnumerator LifeTimeDuration()
-    {
-        yield return new WaitForSeconds(LifeTime);
-        SetEnable();
-    }
+            MyRigidBody.AddRelativeForce(Vector3.forward * _weapon.Force, ForceMode.Impulse);
+            StartCoroutine(LifeTimeDuration());
+        }
 
-    void SetEnable()
-    {
-        MyRigidBody.velocity = Vector3.zero;
-        MyRigidBody.angularVelocity = Vector3.zero;
+        IEnumerator LifeTimeDuration()
+        {
+            yield return new WaitForSeconds(LifeTime);
+            SetEnable();
+        }
 
-        gameObject.SetActive(false);
+        public void SetEnable()
+        {
+            MyRigidBody.velocity = Vector3.zero;
+            MyRigidBody.angularVelocity = Vector3.zero;
+
+            gameObject.SetActive(false);
+        }
     }
 }

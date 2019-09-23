@@ -79,7 +79,9 @@ namespace Valve.VR.InteractionSystem
         public bool isDestroying { get; protected set; }
         public bool isHovering { get; protected set; }
         public bool wasHovering { get; protected set; }
-        
+
+
+        public bool IsAttached = false;
 
         private void Awake()
         {
@@ -236,6 +238,7 @@ namespace Valve.VR.InteractionSystem
 
             hoveringHand = hand;
 
+            
             if (highlightOnHover == true)
             {
                 CreateHighlightRenderers();
@@ -249,9 +252,11 @@ namespace Valve.VR.InteractionSystem
         /// </summary>
         private void OnHandHoverEnd(Hand hand)
         {
+
             wasHovering = isHovering;
             isHovering = false;
 
+            
             if (highlightOnHover && highlightHolder != null)
                 Destroy(highlightHolder);
         }
@@ -273,6 +278,7 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnAttachedToHand(Hand hand)
         {
+            IsAttached = true;
             if (activateActionSetOnAttach != null)
                 activateActionSetOnAttach.Activate(hand.handType);
 
@@ -314,6 +320,7 @@ namespace Valve.VR.InteractionSystem
             }
 
             attachedToHand = null;
+            IsAttached = false;
         }
 
         protected virtual void OnDestroy()
