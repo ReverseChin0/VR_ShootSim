@@ -32,6 +32,8 @@ namespace Valve.VR.InteractionSystem
 
         private void Update()
         {
+            //Debug.DrawRay(Barrel.position, Barrel.forward, Color.yellow);
+            Debug.DrawLine(Barrel.position, Barrel.position + new Vector3(0,0,Barrel.position.z+10f), Color.red);
             if (interactable.IsAttached)
             {
                 Debug.Log("Se presiono");
@@ -48,16 +50,12 @@ namespace Valve.VR.InteractionSystem
 
             RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+            if (Physics.Raycast(Barrel.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                
                 Debug.Log("Did Hit");
             }
-            else
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-                Debug.Log("Did not Hit");
-            }
+            
 
             Debug.Log("Se disparoooo");
            // target.Disparar(this);
