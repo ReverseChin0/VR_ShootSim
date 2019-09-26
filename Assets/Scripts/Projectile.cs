@@ -28,7 +28,7 @@ namespace Valve.VR.InteractionSystem
 
             gameObject.SetActive(true);
 
-            MyRigidBody.AddRelativeForce(Vector3.forward * _weapon.Force, ForceMode.Impulse);
+            //MyRigidBody.AddRelativeForce(Vector3.forward * _weapon.Force, ForceMode.Impulse);
             StartCoroutine(LifeTimeDuration());
         }
 
