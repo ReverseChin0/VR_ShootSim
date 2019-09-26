@@ -5,22 +5,38 @@ using UnityEngine.AI;
 
 public class EnemieAgent : MonoBehaviour
 {
-    public Transform[] target;
+    Transform[] targets;
     public NavMeshAgent agent;
     Animator miAnim;
+    [HideInInspector]
+    public EnemyManager miManager;
 
     Vector3 currentDestination;
-    int current = 0, ntargets;
+    int current = 0, ntargets, next;
     public float Distance = 2;
     bool arrived = false;
 
     private void Start()
     {
-        currentDestination = target[current].position;
-        ntargets = target.Length;
-        agent.SetDestination(currentDestination);
+      
+    }
+
+    public void InitializeEnemies(Transform[] _t)
+    {
+        targets = _t;
         miAnim = transform.GetChild(0).GetComponent<Animator>();
+        ntargets = targets.Length;
+        next = Random.Range(0, ntargets);
+        while (!miManager.RequestPosition(next))
+        {
+            next = Random.Range(0, ntargets);
+        }
+
+        current = next;
+        currentDestination = targets[next].position;
+        agent.SetDestination(currentDestination);
         miAnim.SetBool("moving", true);
+   
     }
 
     private void Update()
@@ -29,22 +45,28 @@ public class EnemieAgent : MonoBehaviour
         if(direccion.sqrMagnitude < Distance && !arrived)
         {
             arrived = true;
+            miAnim.SetBool("moving", false);
             StartCoroutine(Arrived(Random.Range(2.0f, 10.0f)));
         }
     }
 
     public IEnumerator Arrived(float time)
     {
-        miAnim.SetBool("moving", false);
         yield return new WaitForSeconds(time);
         GoToDestination();
     }
     public void GoToDestination()
     {
+        next = Random.Range(0, ntargets);
+        while (!miManager.RequestPosition(next))
+        {
+            next = Random.Range(0, ntargets);
+        }
+        miManager.LeavePosition(current);
         arrived = false;
-        miAnim.SetBool("moving", true);
-        current = Random.Range(0, ntargets);
-        currentDestination = target[current].position;
+        currentDestination = targets[next].position;
         agent.SetDestination(currentDestination);
+        miAnim.SetBool("moving", true);
+        current = next;
     }
 }
