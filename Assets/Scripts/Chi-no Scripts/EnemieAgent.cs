@@ -7,8 +7,6 @@ public class EnemieAgent : MonoBehaviour
 {
     Transform[] targets;
 
-    public Transform torso;
-
     public NavMeshAgent agent;
     Animator miAnim;
     [HideInInspector]
@@ -64,8 +62,8 @@ public class EnemieAgent : MonoBehaviour
             print("pium "+transform.name);
             yield return new WaitForSeconds(1.0f);
             miAnim.SetBool("Shooting", true);
-            targetRotation = Quaternion.LookRotation(ObjectiveAim.position);
-            transform.rotation = Quaternion.Slerp(torso.rotation, targetRotation, rotationspeed * Time.deltaTime);
+            //targetRotation = Quaternion.LookRotation(ObjectiveAim.position);
+            transform.LookAt(ObjectiveAim.position);// = Quaternion.Slerp(transform.rotation, targetRotation, rotationspeed * Time.deltaTime);
         }
         yield return new WaitForSeconds(time);
         miAnim.SetBool("Shooting", false);
