@@ -6,15 +6,22 @@ using UnityEngine.AI;
 public class EnemieAgent : MonoBehaviour
 {
     Transform[] targets;
+
+    public Transform torso;
+
     public NavMeshAgent agent;
     Animator miAnim;
     [HideInInspector]
     public EnemyManager miManager;
+    [HideInInspector]
+    public Transform ObjectiveAim;
 
     Vector3 currentDestination;
     int current = 0, ntargets, next;
-    public float Distance = 2;
+    public float Distance = 2, rotationspeed =  1f;
     bool arrived = false;
+
+    Quaternion targetRotation;
 
     private void Start()
     {
@@ -52,7 +59,16 @@ public class EnemieAgent : MonoBehaviour
 
     public IEnumerator Arrived(float time)
     {
+        if(Random.Range(0,2)==0)//0 es disparar, 1 es esperar
+        {
+            print("pium "+transform.name);
+            yield return new WaitForSeconds(1.0f);
+            miAnim.SetBool("Shooting", true);
+            targetRotation = Quaternion.LookRotation(ObjectiveAim.position);
+            transform.rotation = Quaternion.Slerp(torso.rotation, targetRotation, rotationspeed * Time.deltaTime);
+        }
         yield return new WaitForSeconds(time);
+        miAnim.SetBool("Shooting", false);
         GoToDestination();
     }
     public void GoToDestination()

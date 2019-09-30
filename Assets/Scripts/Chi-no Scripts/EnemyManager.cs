@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public Transform[] targets;
+    public Transform EnemiesObjectives;
     public GameObject EnemyPrefab;
     List<EnemieAgent> enemies;
     public int enemyn = 0;
@@ -25,6 +26,7 @@ public class EnemyManager : MonoBehaviour
             enemies.Add(GO.GetComponent<EnemieAgent>());
             enemies[i].miManager = this;
             enemies[i].InitializeEnemies(targets);
+            enemies[i].ObjectiveAim = EnemiesObjectives;
         }
         
     }
