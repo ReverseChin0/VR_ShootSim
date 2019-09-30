@@ -84,6 +84,8 @@ namespace Valve.VR.InteractionSystem
         public bool spewDebugText = false;
         public bool showDebugInteractables = false;
 
+        public bool IsGrab = false;
+
         public struct AttachedObject
         {
             public GameObject attachedObject;
@@ -1238,6 +1240,7 @@ namespace Valve.VR.InteractionSystem
 
         protected Vector3 TargetItemPosition(AttachedObject attachedObject)
         {
+           
             if (attachedObject.interactable != null && attachedObject.interactable.skeletonPoser != null && HasSkeleton())
             {
                 Vector3 tp = attachedObject.handAttachmentPointTransform.InverseTransformPoint(transform.TransformPoint(attachedObject.interactable.skeletonPoser.GetBlendedPose(skeleton).position));
@@ -1252,6 +1255,7 @@ namespace Valve.VR.InteractionSystem
 
         protected Quaternion TargetItemRotation(AttachedObject attachedObject)
         {
+            
             if (attachedObject.interactable != null && attachedObject.interactable.skeletonPoser != null && HasSkeleton())
             {
                 Quaternion tr = Quaternion.Inverse(attachedObject.handAttachmentPointTransform.rotation) * (transform.rotation * attachedObject.interactable.skeletonPoser.GetBlendedPose(skeleton).rotation);
@@ -1274,7 +1278,7 @@ namespace Valve.VR.InteractionSystem
             Vector3 targetItemPosition = TargetItemPosition(attachedObjectInfo);
             Vector3 positionDelta = (targetItemPosition - attachedObjectInfo.attachedRigidbody.position);
             velocityTarget = (positionDelta * velocityMagic * Time.deltaTime);
-
+           
             if (float.IsNaN(velocityTarget.x) == false && float.IsInfinity(velocityTarget.x) == false)
             {
                 if (noSteamVRFallbackCamera)
@@ -1316,6 +1320,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         protected virtual void OnInputFocus(bool hasFocus)
         {
+            
             if (hasFocus)
             {
                 DetachObject(applicationLostFocusObject, true);
@@ -1360,6 +1365,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         private void HandDebugLog(string msg)
         {
+           
             if (spewDebugText)
             {
                 Debug.Log("<b>[SteamVR Interaction]</b> Hand (" + this.name + "): " + msg);
@@ -1374,6 +1380,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         public void HoverLock(Interactable interactable)
         {
+            Debug.Log("6");
             if (spewDebugText)
                 HandDebugLog("HoverLock " + interactable);
             hoverLocked = true;
@@ -1388,6 +1395,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         public void HoverUnlock(Interactable interactable)
         {
+            Debug.Log("7");
             if (spewDebugText)
                 HandDebugLog("HoverUnlock " + interactable);
 
@@ -1399,17 +1407,20 @@ namespace Valve.VR.InteractionSystem
 
         public void TriggerHapticPulse(ushort microSecondsDuration)
         {
+           
             float seconds = (float)microSecondsDuration / 1000000f;
             hapticAction.Execute(0, seconds, 1f / seconds, 1, handType);
         }
 
         public void TriggerHapticPulse(float duration, float frequency, float amplitude)
         {
+            
             hapticAction.Execute(0, duration, frequency, amplitude, handType);
         }
 
         public void ShowGrabHint()
         {
+            
             ControllerButtonHints.ShowButtonHint(this, grabGripAction); //todo: assess
         }
 
@@ -1425,6 +1436,7 @@ namespace Valve.VR.InteractionSystem
 
         public GrabTypes GetGrabStarting(GrabTypes explicitType = GrabTypes.None)
         {
+            
             if (explicitType != GrabTypes.None)
             {
                 if (noSteamVRFallbackCamera)
@@ -1448,7 +1460,7 @@ namespace Valve.VR.InteractionSystem
 
                 if (grabPinchAction.GetStateDown(handType))
                     return GrabTypes.Pinch;
-                if (grabGripAction.GetStateDown(handType))
+                if (grabGripAction.GetStateDown(handType))                    
                     return GrabTypes.Grip;
             }
 
@@ -1457,6 +1469,7 @@ namespace Valve.VR.InteractionSystem
 
         public GrabTypes GetGrabEnding(GrabTypes explicitType = GrabTypes.None)
         {
+            
             if (explicitType != GrabTypes.None)
             {
                 if (noSteamVRFallbackCamera)
@@ -1489,9 +1502,10 @@ namespace Valve.VR.InteractionSystem
 
         public bool IsGrabEnding(GameObject attachedObject)
         {
+           
             for (int attachedObjectIndex = 0; attachedObjectIndex < attachedObjects.Count; attachedObjectIndex++)
             {
-                if (attachedObjects[attachedObjectIndex].attachedObject == attachedObject)
+                if (attachedObjects[attachedObjectIndex].attachedObject == attachedObject/* && IsGrab == false*/)
                 {
                     return IsGrabbingWithType(attachedObjects[attachedObjectIndex].grabbedWithType) == false;
                 }
@@ -1502,6 +1516,7 @@ namespace Valve.VR.InteractionSystem
 
         public bool IsGrabbingWithType(GrabTypes type)
         {
+            
             if (noSteamVRFallbackCamera)
             {
                 if (Input.GetMouseButton(0))
@@ -1523,6 +1538,7 @@ namespace Valve.VR.InteractionSystem
 
         public bool IsGrabbingWithOppositeType(GrabTypes type)
         {
+            
             if (noSteamVRFallbackCamera)
             {
                 if (Input.GetMouseButton(0))
