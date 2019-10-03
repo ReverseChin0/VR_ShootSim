@@ -73,6 +73,7 @@ MonoBehaviour:
   ObjectiveAim: {fileID: 0}
   Distance: 2
   rotationspeed: 1
+  dead: 0
 --- !u!1001 &193632036478662761
 PrefabInstance:
   m_ObjectHideFlags: 0
