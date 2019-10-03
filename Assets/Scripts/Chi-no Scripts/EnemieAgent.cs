@@ -7,6 +7,8 @@ public class EnemieAgent : MonoBehaviour
 {
     Transform[] targets;
 
+    public ParticleSystem particools;
+
     public NavMeshAgent agent;
     Animator miAnim;
     [HideInInspector]
@@ -18,12 +20,15 @@ public class EnemieAgent : MonoBehaviour
     int current = 0, ntargets, next;
     public float Distance = 2, rotationspeed =  1f;
     bool arrived = false;
+    public bool dead = false;
+    float healthpoints = 100f;
+
 
     Quaternion targetRotation;
 
     private void Start()
     {
-      
+        particools.Stop();
     }
 
     public void InitializeEnemies(Transform[] _t)
@@ -47,11 +52,16 @@ public class EnemieAgent : MonoBehaviour
     private void Update()
     {
         Vector3 direccion = currentDestination - transform.position;
-        if(direccion.sqrMagnitude < Distance && !arrived)
+        if(!dead && direccion.sqrMagnitude < Distance && !arrived)
         {
             arrived = true;
             miAnim.SetBool("moving", false);
             StartCoroutine(Arrived(Random.Range(2.0f, 10.0f)));
+        }
+
+        if (dead)
+        {
+            FuckingDieGodDammit();
         }
     }
 
@@ -61,12 +71,14 @@ public class EnemieAgent : MonoBehaviour
         {
             print("pium "+transform.name);
             yield return new WaitForSeconds(1.0f);
-            miAnim.SetBool("Shooting", true);
+            miAnim.SetBool("Shooting", true);   
+            particools.Play();
             //targetRotation = Quaternion.LookRotation(ObjectiveAim.position);
             transform.LookAt(ObjectiveAim.position);// = Quaternion.Slerp(transform.rotation, targetRotation, rotationspeed * Time.deltaTime);
         }
         yield return new WaitForSeconds(time);
         miAnim.SetBool("Shooting", false);
+        particools.Stop();
         GoToDestination();
     }
     public void GoToDestination()
@@ -82,5 +94,21 @@ public class EnemieAgent : MonoBehaviour
         agent.SetDestination(currentDestination);
         miAnim.SetBool("moving", true);
         current = next;
+    }
+
+    public void TakeDamage()
+    {
+        healthpoints -= 60.0f;
+        if (healthpoints <= 0)
+        {
+            FuckingDieGodDammit();
+        }
+    }
+
+    public void FuckingDieGodDammit()
+    {
+        miAnim.SetTrigger("Die");
+        StopAllCoroutines();
+        agent.SetDestination(transform.position);
     }
 }
