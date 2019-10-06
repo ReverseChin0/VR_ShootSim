@@ -8,6 +8,7 @@ public class EnemieAgent : MonoBehaviour
     Transform[] targets;
 
     public ParticleSystem particools;
+    CapsuleCollider miColi;
 
     public NavMeshAgent agent;
     Animator miAnim;
@@ -21,7 +22,7 @@ public class EnemieAgent : MonoBehaviour
     public float Distance = 2, rotationspeed =  1f;
     bool arrived = false;
     public bool dead = false;
-    float healthpoints = 100f;
+    float healthpoints = 100f, initialheight,initiialY;
 
 
     Quaternion targetRotation;
@@ -42,11 +43,16 @@ public class EnemieAgent : MonoBehaviour
             next = Random.Range(0, ntargets);
         }
 
+        miColi = GetComponent<CapsuleCollider>();
+        initialheight = miColi.height;
+        initiialY = miColi.center.y;
+
         current = next;
         currentDestination = targets[next].position;
         agent.SetDestination(currentDestination);
         miAnim.SetBool("moving", true);
-   
+        toogleColliderCrouch(false);
+
     }
 
     private void Update()
@@ -56,28 +62,27 @@ public class EnemieAgent : MonoBehaviour
         {
             arrived = true;
             miAnim.SetBool("moving", false);
+            toogleColliderCrouch(true);
             StartCoroutine(Arrived(Random.Range(2.0f, 10.0f)));
         }
 
-        if (dead)
-        {
-            FuckingDieGodDammit();
-        }
     }
 
     public IEnumerator Arrived(float time)
     {
         if(Random.Range(0,2)==0)//0 es disparar, 1 es esperar
         {
-            print("pium "+transform.name);
+            //print("pium "+transform.name);
             yield return new WaitForSeconds(1.0f);
-            miAnim.SetBool("Shooting", true);   
+            miAnim.SetBool("Shooting", true);
+            toogleColliderCrouch(false);
             particools.Play();
             //targetRotation = Quaternion.LookRotation(ObjectiveAim.position);
             transform.LookAt(ObjectiveAim.position);// = Quaternion.Slerp(transform.rotation, targetRotation, rotationspeed * Time.deltaTime);
         }
         yield return new WaitForSeconds(time);
         miAnim.SetBool("Shooting", false);
+        toogleColliderCrouch(true);
         particools.Stop();
         GoToDestination();
     }
@@ -93,12 +98,13 @@ public class EnemieAgent : MonoBehaviour
         currentDestination = targets[next].position;
         agent.SetDestination(currentDestination);
         miAnim.SetBool("moving", true);
+        toogleColliderCrouch(false);
         current = next;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
-        healthpoints -= 60.0f;
+        healthpoints -= damage;
         if (healthpoints <= 0)
         {
             FuckingDieGodDammit();
@@ -109,6 +115,21 @@ public class EnemieAgent : MonoBehaviour
     {
         miAnim.SetTrigger("Die");
         StopAllCoroutines();
+        particools.Stop();
         agent.SetDestination(transform.position);
+    }
+
+    void toogleColliderCrouch(bool _crouch)
+    {
+        if (_crouch)
+        {
+            miColi.height = 1.15f;
+            miColi.center = new Vector3(0.0f, -0.3f, 0.0f);
+        }
+        else
+        {
+            miColi.height = initialheight;
+            miColi.center = new Vector3(0.0f, initiialY, 0.0f);
+        }
     }
 }
