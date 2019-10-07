@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9060507820469832377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.1, y: 1.5, z: -1.036911}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4091475273477777816}
   m_Father: {fileID: 0}
@@ -74,6 +74,7 @@ MonoBehaviour:
   ObjectiveAim: {fileID: 0}
   Distance: 2
   rotationspeed: 1
+  Accuerror: 0.1
   dead: 0
 --- !u!136 &5643203926730572164
 CapsuleCollider:

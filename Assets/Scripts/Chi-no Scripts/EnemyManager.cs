@@ -7,8 +7,10 @@ public class EnemyManager : MonoBehaviour
     public Transform[] targets;
     public Transform EnemiesObjectives;
     public GameObject EnemyPrefab;
+    public Vector3 SpawnPoint;
     List<EnemieAgent> enemies;
     public int enemyn = 0;
+    int totalenemies;
     bool[] ocupado;
     private void Start()
     {
@@ -21,14 +23,15 @@ public class EnemyManager : MonoBehaviour
 
         for(int i = 0; i< enemyn; i++)
         {
-            GameObject GO = Instantiate(EnemyPrefab, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
+            GameObject GO = Instantiate(EnemyPrefab, SpawnPoint, Quaternion.identity);
             GO.name = GO.name + i.ToString();
             enemies.Add(GO.GetComponent<EnemieAgent>());
             enemies[i].miManager = this;
             enemies[i].InitializeEnemies(targets);
             enemies[i].ObjectiveAim = EnemiesObjectives;
         }
-        
+        totalenemies = enemyn;
+
     }
 
     public bool RequestPosition(int _r)
@@ -47,8 +50,22 @@ public class EnemyManager : MonoBehaviour
         ocupado[_l] = false;
     }
 
+    public void RespawnAgent(EnemieAgent ag)
+    {
+        totalenemies++;
+        enemies.Remove(ag);
+        Destroy(ag.gameObject);
+        GameObject GO = Instantiate(EnemyPrefab, SpawnPoint, Quaternion.identity);
+        GO.name = GO.name + totalenemies.ToString();
+        EnemieAgent mienemi = GO.GetComponent<EnemieAgent>();
+        enemies.Add(mienemi);
+
+        mienemi.GetComponent<EnemieAgent>().miManager = this;
+        mienemi.InitializeEnemies(targets);
+        mienemi.ObjectiveAim = EnemiesObjectives;
+    }
+
     private void Update()
     {
-        
     }
 }
