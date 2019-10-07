@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 188d803530358034dbefeaffa954b127,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -132,6 +132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -768,7 +773,7 @@ BoxCollider:
   m_GameObject: {fileID: 18393397}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -816,7 +821,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18393397}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &18393401
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,6 +1342,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1756,6 +1766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -2772,6 +2787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3084,6 +3104,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3395,6 +3420,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -4107,7 +4137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: bc3c2988613cead4cafa4bf6d09685e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 98.1
+      value: 97.94
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: bc3c2988613cead4cafa4bf6d09685e1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9500,6 +9530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10641,6 +10676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11610,6 +11650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -13043,8 +13088,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263096477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.887, y: 0.02, z: 64.21}
-  m_LocalScale: {x: 1.5049597, y: 0.9, z: 0.915327}
+  m_LocalPosition: {x: -4.402, y: 0.166, z: 64.21}
+  m_LocalScale: {x: 1.8014368, y: 0.9, z: 0.915327}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -13060,6 +13105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -13648,6 +13698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -19674,6 +19729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20052,7 +20112,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 1614054484}
-  rango: 500
+  rango: 4000
   continuarDisparando: 0
   FireRate: 10
   FuerzaDeImpacto: 800
@@ -20228,7 +20288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351511813}
   m_LocalRotation: {x: -0.99326396, y: -0, z: 0.115873985, w: 0}
-  m_LocalPosition: {x: -2.841, y: 1.576, z: 60.616}
+  m_LocalPosition: {x: -5.57, y: 1.576, z: 60.856}
   m_LocalScale: {x: 0.0012636884, y: 0.0021396482, z: 0.0021396477}
   m_Children:
   - {fileID: 1614054484}
@@ -20341,6 +20401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -20930,6 +20995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -26225,6 +26295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -38052,6 +38127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38365,7 +38445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3107218
+      value: -2.236
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38373,7 +38453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 67.853
+      value: 64.347
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalRotation.x
@@ -39342,6 +39422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39745,6 +39830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -40166,7 +40256,7 @@ BoxCollider:
   m_GameObject: {fileID: 604713374}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -40214,7 +40304,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604713374}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &604713378
 Transform:
   m_ObjectHideFlags: 0
@@ -41468,6 +41558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42070,19 +42165,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660885687}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0, y: 0, z: 60}
+  m_LocalScale: {x: 0.010521122, y: 0.010521122, z: 0.010521122}
   m_Children:
   - {fileID: 139447342}
   m_Father: {fileID: 0}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4.78, y: 2.95}
+  m_SizeDelta: {x: 404, y: 280}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660885689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42131,7 +42226,7 @@ Canvas:
   m_GameObject: {fileID: 660885687}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -42564,6 +42659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -44643,6 +44743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45208,7 +45313,7 @@ MonoBehaviour:
   handType: 0
   trackedObject: {fileID: 0}
   grabPinchAction:
-    actionPath: /actions/default/in/GrabPinch
+    actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
   grabGripAction:
     actionPath: /actions/default/in/GrabGrip
@@ -45783,10 +45888,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.34
+  m_Height: 2.08
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.96, z: 0}
 --- !u!1 &735251245
 GameObject:
   m_ObjectHideFlags: 0
@@ -46007,7 +46112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735249637}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -3.692, y: 0.353, z: 63.943}
+  m_LocalPosition: {x: -5.42, y: 0.353, z: 61.857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1636384430}
@@ -46363,6 +46468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -48268,6 +48378,113 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300010, guid: 82099bae46e4f244a81b7787038529f8, type: 3}
+--- !u!1 &826993528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826993529}
+  - component: {fileID: 826993533}
+  - component: {fileID: 826993532}
+  - component: {fileID: 826993531}
+  - component: {fileID: 826993530}
+  m_Layer: 0
+  m_Name: SueloEscuela2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &826993529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826993528}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -5.6, y: -0, z: 68.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1708259607}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180}
+--- !u!114 &826993530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826993528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  markerActive: 1
+--- !u!64 &826993531
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826993528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 25c9d26f7a245c54a876d9c259005674, type: 3}
+--- !u!23 &826993532
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826993528}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 417e639b66cd3a24e9c5312be99ce3bd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &826993533
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826993528}
+  m_Mesh: {fileID: 4300000, guid: 25c9d26f7a245c54a876d9c259005674, type: 3}
 --- !u!1 &828549181
 GameObject:
   m_ObjectHideFlags: 0
@@ -48464,6 +48681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -50252,6 +50474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50938,6 +51165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -58081,6 +58313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64174,7 +64411,7 @@ BoxCollider:
   m_GameObject: {fileID: 1060065326}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -64222,7 +64459,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060065326}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &1060065330
 Transform:
   m_ObjectHideFlags: 0
@@ -64805,6 +65042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -65207,6 +65449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -66650,6 +66897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -72396,6 +72648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73612,6 +73869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -74015,6 +74277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -74511,6 +74778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -75099,6 +75371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75610,7 +75887,7 @@ BoxCollider:
   m_GameObject: {fileID: 1293460217}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -75658,7 +75935,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293460217}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &1293460221
 Transform:
   m_ObjectHideFlags: 0
@@ -77281,7 +77558,7 @@ BoxCollider:
   m_GameObject: {fileID: 1356827951}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -77329,7 +77606,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356827951}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &1356827955
 Transform:
   m_ObjectHideFlags: 0
@@ -78044,6 +78321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -78845,6 +79127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -79708,6 +79995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -80757,6 +81049,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81159,6 +81456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -81564,6 +81866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81966,6 +82273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -84139,6 +84451,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -84555,7 +84872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636384429}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.5350003, y: 1.6470001, z: -0.7669983}
+  m_LocalPosition: {x: 0.128, y: 1.436, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 735343773}
@@ -85400,6 +85717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -86170,6 +86492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -87827,6 +88154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88965,6 +89297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -89535,6 +89872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -89940,6 +90282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -90251,6 +90598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -90880,6 +91232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -92463,6 +92820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93067,7 +93429,7 @@ BoxCollider:
   m_GameObject: {fileID: 1900246407}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -93115,7 +93477,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900246407}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &1900246411
 Transform:
   m_ObjectHideFlags: 0
@@ -93158,7 +93520,7 @@ BoxCollider:
   m_GameObject: {fileID: 1900993626}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -93206,7 +93568,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900993626}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &1900993630
 Transform:
   m_ObjectHideFlags: 0
@@ -94219,6 +94581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -95433,6 +95800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96115,6 +96487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -103387,6 +103764,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Granada_B1 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103860,6 +104242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -104356,6 +104743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Granada_B1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 997978597241703817, guid: ee551c2e2a9d24e4ca866c938527d2e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997978597242130857, guid: ee551c2e2a9d24e4ca866c938527d2e4,
         type: 3}
@@ -105300,7 +105692,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 2080089720}
-  rango: 25
+  rango: 5000
   continuarDisparando: 0
   FireRate: 2
   FuerzaDeImpacto: 30
@@ -105520,6 +105912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vfx_Proyectil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
@@ -105975,18 +106372,18 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 202789126}
-  rango: 50
+  rango: 7000
   continuarDisparando: 0
   FireRate: 10
   FuerzaDeImpacto: 5
-  fire: {fileID: 0}
+  fire: {fileID: 978426967}
   smoke: {fileID: 0}
   dubugObj: {fileID: 0}
   Player: {fileID: 735249637}
   SpawnSpot: {fileID: 1293460217}
   AimDot: {fileID: 230097941}
   IsGrap: 0
-  WeaponDamage: 10
+  WeaponDamage: 35
 --- !u!114 &960917335079356611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106665,6 +107062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vfx_Proyectil
       objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -106756,6 +107158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vfx_Proyectil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
@@ -106871,6 +107278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vfx_Proyectil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
@@ -111938,7 +112350,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 1079239600}
-  rango: 500
+  rango: 9000
   continuarDisparando: 0
   FireRate: 25
   FuerzaDeImpacto: 10
@@ -111949,7 +112361,7 @@ MonoBehaviour:
   SpawnSpot: {fileID: 1900246407}
   AimDot: {fileID: 897334899}
   IsGrap: 0
-  WeaponDamage: 45
+  WeaponDamage: 65
 --- !u!114 &4868013139222481473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113302,9 +113714,9 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 614426737}
-  rango: 200
+  rango: 4500
   continuarDisparando: 0
-  FireRate: 60
+  FireRate: 10
   FuerzaDeImpacto: 78
   fire: {fileID: 1026801979}
   smoke: {fileID: 0}
@@ -113313,7 +113725,7 @@ MonoBehaviour:
   SpawnSpot: {fileID: 1060065326}
   AimDot: {fileID: 702986283}
   IsGrap: 0
-  WeaponDamage: 20
+  WeaponDamage: 45
 --- !u!114 &5698337704268578353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113716,7 +114128,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 2015320291}
-  rango: 50
+  rango: 5000
   continuarDisparando: 0
   FireRate: 5
   FuerzaDeImpacto: 100
@@ -113935,6 +114347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vfx_Proyectil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
@@ -115866,7 +116283,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 512961116}
-  rango: 300
+  rango: 11000
   continuarDisparando: 0
   FireRate: 2
   FuerzaDeImpacto: 14
@@ -116202,6 +116619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vfx_Proyectil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446012077007588141, guid: 22ebffd4c665bb7478be23d471d84811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446012077007588138, guid: 22ebffd4c665bb7478be23d471d84811,
         type: 3}
@@ -117039,18 +117461,18 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   Barrel: {fileID: 557448099}
-  rango: 1000
+  rango: 10000
   continuarDisparando: 0
   FireRate: 2
   FuerzaDeImpacto: 100
-  fire: {fileID: 978426967}
+  fire: {fileID: 405257757}
   smoke: {fileID: 0}
   dubugObj: {fileID: 0}
   Player: {fileID: 735249637}
   SpawnSpot: {fileID: 1900993626}
   AimDot: {fileID: 683848090}
   IsGrap: 0
-  WeaponDamage: 10
+  WeaponDamage: 75
 --- !u!114 &8308857739953032717
 MonoBehaviour:
   m_ObjectHideFlags: 0

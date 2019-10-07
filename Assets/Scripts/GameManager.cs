@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void Fin()
     {
+        canvas.SetActive(true);
         txt.text = "Puntuación Final: " + cont.ToString();
     }
 

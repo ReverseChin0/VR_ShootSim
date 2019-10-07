@@ -164,9 +164,9 @@ public class EnemieAgent : MonoBehaviour
         innacurateTarget.Normalize();
         if (Physics.Raycast(particools.transform.position, innacurateTarget, out hit, 60f))
         {
-            Debug.DrawRay(particools.transform.position, innacurateTarget * 60.0f, Color.red, 3f);
-            Debug.Log("Le di a... " + hit.transform.name);
-            if (hit.transform.CompareTag("Player"))
+           // Debug.DrawRay(particools.transform.position, innacurateTarget * 60.0f, Color.red, 3f);
+           // Debug.Log("Le di a... " + hit.transform.name);
+           if (hit.transform.CompareTag("Player"))
             {
                 hit.transform.GetComponent<CameraTestPlayer>().TakeDMG(15f);
             }
@@ -174,7 +174,7 @@ public class EnemieAgent : MonoBehaviour
         else
         {
             Debug.DrawRay(particools.transform.position, innacurateTarget * 60.0f, Color.yellow, 3f);
-            Debug.Log("No le di...");
+           // Debug.Log("No le di...");
         }
     }
 }

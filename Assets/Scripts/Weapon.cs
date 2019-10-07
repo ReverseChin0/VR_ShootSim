@@ -29,7 +29,7 @@ namespace Valve.VR.InteractionSystem
         public bool IsGrap = false;
 
         Vector3 distance;
-        float maxDistanceToPlayer = 50f;
+        float maxDistanceToPlayer = 10f;
 
 
         public float WeaponDamage;
@@ -64,7 +64,7 @@ namespace Valve.VR.InteractionSystem
                 /*linea.startColor = Color.red;
                 linea.endColor = Color.red;*/
                  //Debug.Log("Se presiono");
-                 if (Disparar.GetStateDown(GetComponentInParent<SteamVR_Behaviour_Pose>().inputSource) && Time.time >= continuarDisparando)
+                 if (Disparar.GetStateDown(GetComponentInParent<SteamVR_Behaviour_Pose>().inputSource) /*&& Time.time >= continuarDisparando*/)
                  {
                      continuarDisparando = Time.time + 1f / FireRate;
                      Shoot();
@@ -105,15 +105,17 @@ namespace Valve.VR.InteractionSystem
             if (Physics.Raycast(Barrel.position, Barrel.forward, out hit, /*Mathf.Infinity*/rango))
             {
                 Debug.DrawRay(Barrel.position, Barrel.TransformDirection(Vector3.forward) * hit.distance, Color.green);
-                Debug.Log("Le pegaste a: "+hit.collider.name);
+                Debug.Log("Le pegaste a: " + hit.collider.name + " con: " + this.gameObject.name);
+               // hit.transform.GetComponent<EnemieAgent>().TakeDamage(WeaponDamage);
                 if(hit.rigidbody != null)
                 {
                     hit.rigidbody.AddForce(-hit.normal * FuerzaDeImpacto);
-                    if (hit.transform.CompareTag("Enemie"))
-                    {
-                        hit.transform.GetComponent<EnemieAgent>().TakeDamage(WeaponDamage);
-                    }
+                   
                     
+                }
+                if (hit.transform.CompareTag("Enemie"))
+                {
+                    hit.transform.GetComponent<EnemieAgent>().TakeDamage(WeaponDamage);
                 }
             }
             else

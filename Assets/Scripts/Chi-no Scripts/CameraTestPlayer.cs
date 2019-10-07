@@ -49,7 +49,7 @@ public class CameraTestPlayer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Auch, siento que me queda el " + myHealt + "% de vida");
+            //Debug.Log("Auch, siento que me queda el " + myHealt + "% de vida");
         }
     }
 }
