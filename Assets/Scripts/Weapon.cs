@@ -24,8 +24,8 @@ namespace Valve.VR.InteractionSystem
         public float FuerzaDeImpacto = 30f;
         public ParticleSystem fire, smoke;
 
-        public GameObject dubugObj, Player, SpawnSpot;
-
+        public GameObject dubugObj, Player, SpawnSpot, AimDot;
+        Vector3 endPoint;
         public bool IsGrap = false;
 
         Vector3 distance;
@@ -45,6 +45,7 @@ namespace Valve.VR.InteractionSystem
         {
             linea.material = new Material(Shader.Find("Sprites/Default"));
             linea.SetColors(Color.red, Color.red);
+            AimDot.SetActive(false);
         }
 
         private void Update()
@@ -53,8 +54,11 @@ namespace Valve.VR.InteractionSystem
             //Debug.DrawLine(Barrel.position, Barrel.position + new Vector3(0,0,Barrel.position.z+10f), Color.red);
              if (interactable.IsAttached)
              {
+                AimDot.SetActive(true);
                 linea.SetPosition(0,new Vector3(Barrel.position.x, Barrel.position.y, Barrel.position.z));
-                linea.SetPosition(1, new Vector3(Barrel.position.x , Barrel.position.y , Barrel.position.z +rango));
+                endPoint = new Vector3(Barrel.position.x, Barrel.position.y, Barrel.position.z + rango);
+                linea.SetPosition(1, endPoint);
+                AimDot.transform.position = endPoint;
                 /*linea.startColor = Color.red;
                 linea.endColor = Color.red;*/
                  //Debug.Log("Se presiono");
@@ -66,6 +70,7 @@ namespace Valve.VR.InteractionSystem
             }
             else
             {
+                AimDot.SetActive(false);
                 linea.SetPosition(0, Vector3.zero);
                 linea.SetPosition(1, Vector3.zero );
                /* linea.startColor = Color.red;
