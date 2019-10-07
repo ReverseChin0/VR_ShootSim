@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraTestPlayer : MonoBehaviour
 {
     Camera cam;
+    public float myHealt = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +31,23 @@ public class CameraTestPlayer : MonoBehaviour
                 {
                     EnemieAgent agent = objectHit.GetComponent<EnemieAgent>();
                     agent.TakeDamage(55.0f);
-                    print(agent.name + ": Ah fuck! ");
+                    //print(agent.name + ": Ah fuck! ");
                 }
             }
+        }
+    }
+
+    public void TakeDMG(float f)
+    {
+        myHealt -= f;
+        
+        if (myHealt < 0)
+        {
+            Debug.Log("Me muri");
+        }
+        else
+        {
+            Debug.Log("Auch, siento que me queda el " + myHealt + "% de vida");
         }
     }
 }
