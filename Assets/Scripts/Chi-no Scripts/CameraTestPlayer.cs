@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CameraTestPlayer : MonoBehaviour
 {
+    GameManager gm;
     Camera cam;
     public float myHealt = 100.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         cam = GetComponent<Camera>(); 
     }
 
@@ -42,6 +44,8 @@ public class CameraTestPlayer : MonoBehaviour
         if (myHealt < 0)
         {
             Debug.Log("Me muri");
+            gm.Fin();
+            
         }
         else
         {

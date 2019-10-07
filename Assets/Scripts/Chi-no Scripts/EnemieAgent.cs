@@ -23,12 +23,13 @@ public class EnemieAgent : MonoBehaviour
     bool arrived = false;
     public bool dead = false;
     float healthpoints = 100f, initialheight,initiialY;
-
+    GameManager gm;
 
     Quaternion targetRotation;
 
     private void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         particools.Stop();
     }
 
@@ -121,6 +122,7 @@ public class EnemieAgent : MonoBehaviour
 
     public void FuckingDieGodDammit()
     {
+        gm.SetCont();
         miAnim.SetTrigger("Die");
         StopAllCoroutines();
         particools.Stop();
@@ -164,7 +166,7 @@ public class EnemieAgent : MonoBehaviour
         {
             Debug.DrawRay(particools.transform.position, innacurateTarget * 60.0f, Color.red, 3f);
             Debug.Log("Le di a... " + hit.transform.name);
-            if (hit.transform.CompareTag("MainCamera"))
+            if (hit.transform.CompareTag("Player"))
             {
                 hit.transform.GetComponent<CameraTestPlayer>().TakeDMG(15f);
             }

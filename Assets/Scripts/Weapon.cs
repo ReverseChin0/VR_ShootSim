@@ -32,11 +32,13 @@ namespace Valve.VR.InteractionSystem
         float maxDistanceToPlayer = 50f;
 
 
+        public float WeaponDamage;
+
         private void Awake()
         {
             //Pose = ;
             interactable = GetComponent<Interactable>();
-            linea = transform.GetChild(4).GetComponent<LineRenderer>(); 
+            linea = transform.GetChild(0).GetComponent<LineRenderer>(); 
                 //GetComponent<LineRenderer>();
             
         }
@@ -98,7 +100,7 @@ namespace Valve.VR.InteractionSystem
         {
             //Projectile target = projectilePool.mProjectil[0];
             fire.Play();
-            smoke.Play();
+            //smoke.Play();
             RaycastHit hit;
             if (Physics.Raycast(Barrel.position, Barrel.forward, out hit, /*Mathf.Infinity*/rango))
             {
@@ -107,6 +109,11 @@ namespace Valve.VR.InteractionSystem
                 if(hit.rigidbody != null)
                 {
                     hit.rigidbody.AddForce(-hit.normal * FuerzaDeImpacto);
+                    if (hit.transform.CompareTag("Enemie"))
+                    {
+                        hit.transform.GetComponent<EnemieAgent>().TakeDamage(WeaponDamage);
+                    }
+                    
                 }
             }
             else
