@@ -52,13 +52,14 @@ public class EnemyManager : MonoBehaviour
 
     public void RespawnAgent(EnemieAgent ag)
     {
-        totalenemies++;
+        
         enemies.Remove(ag);
         Destroy(ag.gameObject);
         GameObject GO = Instantiate(EnemyPrefab, SpawnPoint, Quaternion.identity);
         GO.name = GO.name + totalenemies.ToString();
         EnemieAgent mienemi = GO.GetComponent<EnemieAgent>();
         enemies.Add(mienemi);
+        totalenemies++;
 
         mienemi.GetComponent<EnemieAgent>().miManager = this;
         mienemi.InitializeEnemies(targets);

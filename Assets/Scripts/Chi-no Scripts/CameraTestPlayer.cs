@@ -25,13 +25,11 @@ public class CameraTestPlayer : MonoBehaviour
             Debug.DrawRay(cam.transform.position,ray.direction,Color.red,1.0f);
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.name);
                 Transform objectHit = hit.transform;
                 if (objectHit.CompareTag("Enemie"))
                 {
-                    EnemieAgent agent = objectHit.GetComponent<EnemieAgent>();
-                    agent.TakeDamage(55.0f);
-                    //print(agent.name + ": Ah fuck! ");
+                    Debug.Log(hit.transform.name);
+                    objectHit.GetComponent<EnemieAgent>().TakeDamage(55.0f);
                 }
             }
         }
